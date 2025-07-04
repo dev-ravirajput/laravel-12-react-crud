@@ -46,7 +46,7 @@ export default function PostCreate() {
                     </Link>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+                <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6 border border-gray-300 dark:border-gray-600">
                     <form onSubmit={handleSubmit}>
                         <div className="space-y-6">
                             {/* Title Field */}
@@ -59,7 +59,7 @@ export default function PostCreate() {
                                     id="title"
                                     value={data.title}
                                     onChange={(e) => setData('title', e.target.value)}
-                                    className={`p-2 block w-full rounded-md shadow-sm ${errors.title ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500'} dark:bg-gray-700 dark:text-white`}
+                                    className={`border border-gray-300 dark:border-gray-600 p-2 block w-full rounded-md shadow-sm ${errors.title ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500'} dark:bg-gray-700 dark:text-white`}
                                 />
                                 {errors.title && (
                                     <p className="mt-2 text-sm text-red-600 dark:text-red-400">{errors.title}</p>
@@ -76,7 +76,7 @@ export default function PostCreate() {
                                     rows={8}
                                     value={data.content}
                                     onChange={(e) => setData('content', e.target.value)}
-                                    className={`p-2 block w-full rounded-md shadow-sm ${errors.content ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500'} dark:bg-gray-700 dark:text-white`}
+                                    className={`border border-gray-300 dark:border-gray-600 p-2 block w-full rounded-md shadow-sm ${errors.content ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500'} dark:bg-gray-700 dark:text-white`}
                                 />
                                 {errors.content && (
                                     <p className="mt-2 text-sm text-red-600 dark:text-red-400">{errors.content}</p>
@@ -90,7 +90,7 @@ export default function PostCreate() {
                                     id="is_published"
                                     checked={data.is_published}
                                     onChange={(e) => setData('is_published', e.target.checked)}
-                                    className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                                    className="border border-gray-300 dark:border-gray-600 p-2 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
                                 />
                                 <label htmlFor="is_published" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
                                     Publish immediately
